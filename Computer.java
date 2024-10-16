@@ -21,6 +21,10 @@ public class Computer {
     public boolean getPCState() {
         return isOn;    
     }
+    public String getPCDetails() {
+        return "Procesador: " + cpuId + " | Version DDR " + ramVersion + " | Encendido: " + isOn;
+        
+    }
     
     //set methods
     public void setCpuId(String newCpuId) {
