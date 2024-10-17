@@ -1,13 +1,13 @@
 public class Computer {
     //declaring class variables
     private String cpuId;
-    private int ramVersion;    
+    private int ramSlots;    
     private boolean isOn;
     //Constructor
     //initialation of class variables
-    Computer (String cpuId, int ramVersion) {
+    public Computer (String cpuId, int ramSlots) {
         this.cpuId = cpuId;
-        this.ramVersion = ramVersion;
+        this.ramSlots = ramSlots;
         //always on false
         isOn = false;
     }
@@ -15,14 +15,14 @@ public class Computer {
     public String getcpuId() {
         return cpuId;
     } 
-    public int getRamVersion() {
-        return ramVersion;
+    public int getRamSlots() {
+        return ramSlots;
     }
     public boolean getPCState() {
         return isOn;    
     }
     public String getPCDetails() {
-        return "Procesador: " + cpuId + " | Version DDR " + ramVersion + " | Encendido: " + isOn;
+        return "Procesador: " + cpuId + " | Version DDR " + ramSlots + " modulos de ram instalado Encendido: " + (isOn ? "sí" : "no");
         
     }
     
@@ -31,8 +31,8 @@ public class Computer {
         cpuId = newCpuId;
     
     }
-    public void setRamVersion(int newRamVersion) {
-        ramVersion = newRamVersion;
+    public void addRamSlot(int newModule) {
+        ramSlots += newModule ;
 
     }
     //switch isOn value from false to true and backwards
@@ -46,7 +46,7 @@ public class Computer {
     
     //print methods
     public void printCpuDetails() {
-        System.out.println("Procesador: " + cpuId + " | Version DDR " + ramVersion + " | Encendido: " + isOn);
+        System.out.println("Procesador: " + cpuId + " | Version DDR " + ramSlots + " modulos de ram instalado Encendido: " + (isOn ? "sí" : "no"));
     
     }
     
